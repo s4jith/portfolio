@@ -71,27 +71,6 @@ const About = () => {
               transition={{ duration: 0.8, delay: 0.4 }}
               className="relative"
             >
-              <div className="bg-gradient-to-br from-orange-500 to-red-500 rounded-2xl p-8 text-white">
-                <h4 className="text-xl font-semibold mb-4">Current Focus</h4>
-                <ul className="space-y-3">
-                  <li className="flex items-center gap-3">
-                    <div className="w-2 h-2 bg-white rounded-full"></div>
-                    <span>GenAI</span>
-                  </li>
-
-                  <li className="flex items-center gap-3">
-                    <div className="w-2 h-2 bg-white rounded-full"></div>
-                    <span>Machine Learning</span>
-                  </li>
-                  
-                  <li className="flex items-center gap-3">
-                    <div className="w-2 h-2 bg-white rounded-full"></div>
-                    <span>Data Science</span>
-                  </li>
-                  
-                  
-                </ul>
-              </div>
               
               {/* Floating Elements */}
               <div className="absolute -top-4 -right-4 w-20 h-20 bg-yellow-400 rounded-full opacity-20 animate-pulse"></div>
