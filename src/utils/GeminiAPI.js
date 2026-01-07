@@ -1,8 +1,16 @@
-// Gemini AI API integration
-const GEMINI_API_KEY = 'AIzaSyDGHhQmveGujKTYt1suLtAskhfefHkON1s';
+// Gemini AI API integration - DISABLED
+// API key should be stored in .env file as VITE_GEMINI_API_KEY
+// This feature is currently disabled
+
+const GEMINI_API_KEY = import.meta.env.VITE_GEMINI_API_KEY || '';
 const GEMINI_API_URL = 'https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent';
 
 export const queryGeminiAI = async (query) => {
+    // Feature disabled - return error message
+    if (!GEMINI_API_KEY) {
+        throw new Error('AI Query feature is currently disabled');
+    }
+
     const systemContext = `You are an AI assistant embedded in Sajith J's portfolio terminal. Sajith is a 3rd-year B.Tech AI/Data Science student specializing in Machine Learning, GenAI, RAG systems, and Computer Vision. Keep responses concise (max 150 words), technically accurate, and helpful. If asked about Sajith, use the context that he's an aspiring AI/ML engineer who has built projects like FlexiEV (EV Management with RAG), VerseVault (AI Library), MythSnare (Misinformation Detection), and Fire Detection systems. He's proficient in Python, PyTorch, TensorFlow, HuggingFace, and LangChain.`;
 
     try {
